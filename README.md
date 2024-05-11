@@ -21,11 +21,13 @@ Install my project with npm:
   npm install cafe-management-system
   cd cafe-management-system
 ```
+Also ensure that the paths "background.jpg" and "cafe_menu.csv" are changed to the file paths in your local directory. 
+
 To install the required libraries previously mentioned, type this command in Command Prompt: 
 
 ```bash
   pip install 'library name' 
-``` 
+```
 
 ## Documentation
 
