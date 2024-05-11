@@ -5,18 +5,18 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-# main window
+# main GUI window
 root = tk.Tk()
 root.title("Café Bistro Management System")
 root.geometry("900x600")
 root.maxsize(900,600)
 
 # store csv into a dataframe
-data_path = "cafe_menu .csv"
+data_path = "C:\\Users\\LENOVO\\OneDrive\\Computer Engineering\\Programming\\Python\\cafe management project\\cafe_menu .csv"
 df = pd.read_csv(data_path)
 
 # displaying the background image
-bg_image = Image.open("background.jpg")
+bg_image = Image.open("C:\\Users\\LENOVO\\Downloads\\background.jpg")
 bg_photo = ImageTk.PhotoImage(bg_image)
 background_label = tk.Label(root, image=bg_photo)
 background_label.place(x=0, y=0, relwidth=1, relheight=1)
@@ -275,6 +275,8 @@ def PieChart():
         "Net Income analysis"
     ]
 
+    selected_option = tk.StringVar(pie_window)  
+
     def plot_chart(option):
         Revenue=[39400,41000,37200,47390,51600,
                  39000,31500,46000,41350,42100]
@@ -308,8 +310,9 @@ def PieChart():
             plt.show()
         
 
-    option_menu = tk.OptionMenu(bar_window, selected_option, *options, command=lambda option: plot_graph(selected_option.get()))
+    option_menu = tk.OptionMenu(pie_window, selected_option, *options, command=lambda option: plot_chart(selected_option.get()))
     option_menu.pack()
+
 
 
 # creating buttons for each menu option
@@ -336,4 +339,3 @@ btn_pie_chart.place(relx=0.44, rely=0.7, anchor="w")
 
 
 root.mainloop()
-
