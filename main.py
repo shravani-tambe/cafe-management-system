@@ -5,7 +5,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Main GUI window
+# main window
 root = tk.Tk()
 root.title("Café Bistro Management System")
 root.geometry("900x600")
@@ -64,7 +64,6 @@ def EditMenu():
     price_entry.pack()
 
     def add_item():
-        # Check if all fields are filled
         if not name_entry.get() or not serve_entry.get() or not price_entry.get():
             messagebox.showerror("Kindly fill all required fields")
             return
@@ -256,9 +255,10 @@ def BarGraph():
             plt.ylabel("Net Income/Profit Margin")
             plt.title("Three year Net Income analysis")
             plt.show()
-
-    option_menu = tk.OptionMenu(bar_window, selected_option, *options)
+            
+    option_menu = tk.OptionMenu(bar_window, selected_option, *options, command=plot_graph)
     option_menu.pack()
+
 
 
 def PieChart():
@@ -308,10 +308,11 @@ def PieChart():
             plt.show()
         
 
-    option_menu = tk.OptionMenu(pie_window, tk.StringVar(pie_window), *options, command=plot_chart)
+    option_menu = tk.OptionMenu(bar_window, selected_option, *options, command=lambda option: plot_graph(selected_option.get()))
     option_menu.pack()
 
-# Create buttons for each menu option
+
+# creating buttons for each menu option
 btn_show_menu = tk.Button(root, text="Show Café Menu",font ="Modern, 10", command=ShowCafe, bg="#ede7e1")
 btn_show_menu.place(relx=0.44, rely=0.4, anchor="w") 
 
@@ -335,3 +336,4 @@ btn_pie_chart.place(relx=0.44, rely=0.7, anchor="w")
 
 
 root.mainloop()
+
