@@ -12,11 +12,11 @@ root.geometry("900x600")
 root.maxsize(900,600)
 
 # store csv into a dataframe
-data_path = "C:\\Users\\LENOVO\\OneDrive\\Computer Engineering\\Programming\\Python\\cafe management project\\cafe_menu .csv"
+data_path = "cafe_menu .csv"
 df = pd.read_csv(data_path)
 
 # displaying the background image
-bg_image = Image.open("C:\\Users\\LENOVO\\Downloads\\background.jpg")
+bg_image = Image.open("background.jpg")
 bg_photo = ImageTk.PhotoImage(bg_image)
 background_label = tk.Label(root, image=bg_photo)
 background_label.place(x=0, y=0, relwidth=1, relheight=1)
