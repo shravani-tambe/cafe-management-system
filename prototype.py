@@ -4,14 +4,14 @@ import matplotlib.pyplot as plt
 
 #option one in our main menu.
 def ShowCafe():
-    df=pd.read_csv("prototype_menu .csv",
+    df=pd.read_csv("prototype_menu.csv",
                    index_col='Item_ID')
     print(df)    
 
 #option2 in our main menu. 
 def MenuFilter(): 
     Opt=0
-    df=pd.read_csv("prototype_menu .csv",
+    df=pd.read_csv("prototype_menu.csv",
                    index_col='Item_ID')
     print("          ☆━━━━━━━━━━━━━━━━━━━☆")
     print("               Filters Menu")
@@ -67,7 +67,7 @@ def EditMenu():
 #option 4 in our main menu. 
 def DelMenuItem():
     bvg=input("Enter beverage to delete from the menu:")
-    df=pd.read_csv("prototype_menu .csv",
+    df=pd.read_csv("prototype_menu.csv",
                    index_col='Item_ID')
     df=df[df.Beverages!=bvg]
     df.to_csv("prototype_menu .csv")
@@ -91,7 +91,7 @@ def DiscountsMenu():
 #option 6 in our main menu. 
 def BarGraph():
     OptBar=0
-    df=pd.read_csv("c:\\01. Shravani\\01. VPMS\\02. XII\\4. IP\\cafe_menu .csv")
+    df=pd.read_csv("prototype_menu.csv")
     Beverages=df["Beverages"]
     Cost=df["Cost (in Rs.)"]
     print("       ☆━━━━━━━━━━━━━━━━━━━☆")
