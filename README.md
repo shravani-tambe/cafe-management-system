@@ -3,7 +3,7 @@
 
 This is a GUI based café management system which is programmed in Python3 and utilises the given libraries: Tkinter, Pandas, Matplotlib, Numpy and Pillow.
 
-It can be utilised by cafes and undergraduate freshman level students as a reference project. 
+It can be utilised by entrepreneurs and freshman undergraduate level students as a reference project. 
 
 
 
